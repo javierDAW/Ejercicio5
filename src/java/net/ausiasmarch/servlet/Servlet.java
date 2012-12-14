@@ -50,6 +50,11 @@ public class Servlet extends HttpServlet {
                         reqDispatcher.forward(request, response);
                     }
                     break;
+                    case "saludo":
+                    String nombre = request.getParameter("nombre");
+                    request.setAttribute("nombre", nombre);
+                    getServletContext().getRequestDispatcher("/jsp/saludo.jsp").forward(request, response);
+                    break;
 
                
             }
